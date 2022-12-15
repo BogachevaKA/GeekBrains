@@ -9,3 +9,14 @@
 Введите время в секундах: 3600
 Время в формате ч:м:с - 1.0 : 60.0 : 3600
 """
+
+Решение:
+def convert(seconds):
+    seconds = seconds % (24 * 3600)
+    hour = seconds // 3600
+    minutes = seconds // 60
+    
+    return "%d.0:%d.0:%d" % (hour, minutes, seconds)
+  
+n = int(input('Введите время в секундах: '))
+print('Время в формате ч:м:с - ', convert(n))
