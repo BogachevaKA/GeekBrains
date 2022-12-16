@@ -11,7 +11,7 @@
 """
 
 Решение:
-def convert(seconds):
+def time(seconds):
     seconds = seconds % (24 * 3600)
     hour = seconds // 3600
     minutes = seconds // 60
@@ -19,4 +19,4 @@ def convert(seconds):
     return "%d.0:%d.0:%d" % (hour, minutes, seconds)
   
 n = int(input('Введите время в секундах: '))
-print('Время в формате ч:м:с - ', convert(n))
+print('Время в формате ч:м:с - ', time(n))
