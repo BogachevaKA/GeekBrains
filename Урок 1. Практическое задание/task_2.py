@@ -11,12 +11,5 @@
 """
 
 Решение:
-def time(seconds):
-    seconds = seconds % (24 * 3600)
-    hour = seconds // 3600
-    minutes = seconds // 60
-    
-    return "%d.0:%d.0:%d" % (hour, minutes, seconds)
-  
-n = int(input('Введите время в секундах: '))
-print('Время в формате ч:м:с - ', time(n))
+seconds = int(input("Введите время в секундах: "))
+print(f"Время в формате ч:м:с - {round(seconds/3600,2)}:{round(seconds/60,2)}:{seconds}")
