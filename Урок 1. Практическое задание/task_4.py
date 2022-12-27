@@ -10,12 +10,13 @@
 Ведите целое положительное число: 123456789
 Самая большая цифра в числе: 9
 """
+
 Решение:
-a = int(input('Ведите целое положительное число: '))
-m = a%10
-a = a//10
-while a > 0:
-    if a%10 > m:
-        m = a%10
-    a = a//10
-print('Самая большая цифра в числе: ', m)
+number = int(input('Ведите целое положительное число: '))
+max_num = number%10
+number = number//10
+while number > 0:
+    if number%10 > max_num:
+        max_num = number%10
+    number = number//10
+print('Самая большая цифра в числе: ', max_num)
