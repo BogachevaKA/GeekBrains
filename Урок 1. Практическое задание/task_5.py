@@ -23,11 +23,20 @@
 revenue = int(input('Введите выручку фирмы: '))
 costs = int(input('Введите издержки фирмы: '))
 gain = revenue - costs
-rentabel = float(gain)/revenue
-print('Финансовый результат - прибыль. Ее величина: ', gain)
-print('Значит вычисляем рентабельность выручки (соотношение прибыли к выручке)')
-print('Рентабельность выручки = ', rentabel)
 
-employees = int(input('Введите численность сотрудников фирмы: '))
-gain_employees = float(gain)/employees
-print('Прибыль фирмы в расчете на одного сотрудника = ', gain_employees)
+if gain > 0:
+    print(f'Финансовый результат - прибыль. Ее величина: ', gain)
+    
+    print('Значит вычисляем рентабельность выручки (соотношение прибыли к выручке)')
+    rentabel = gain/revenue
+    print('Рентабельность выручки = ', rentabel)
+    
+    employees = int(input('Введите численность сотрудников фирмы: '))
+    gain_employees = gain/employees
+    print('Прибыль фирмы в расчете на одного сотрудника = ', gain_employees)
+
+elif gain < 0:
+    print('Финансовый результат - убытки. Ее величина: ', gain)
+
+else:
+    print('Выручка равна издержкам')
